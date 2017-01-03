@@ -1,0 +1,60 @@
+SIMULATION  = BEAMTEST_POS1
+GEOMETRYDIR = _PATH_TO_${RHICFTOP}/geometry_
+TABLESDIR   = _PATH_TO_${RHICFTOP}/tables_
+NEVENT      = 10
+RUNNUMBER   = 9999999
+OUTPUTFILE  = _SET_AN_OUTPUTFILE_
+
+BEAM        = neutron
+EBEAM       = 200
+PBEAM       = ZDC
+
+###################
+# For commment
+###################
+
+#***** README *****
+# 0. Common options
+# 'SIMULATION'     Refer ${RHICFTOP}/geometry/GeomtryFiles.dat
+#                  1st, 2nd, 3rd and 4th columns correspond to
+#                  'SIMULATION' mode, GDML file, position of the LHCf 
+#                  and simulation flags (Possible FLAGS are written in 
+#                  ${RHICFTOP}/lib/RHICfParam.hpp), respectively
+# 'GEOMETRYDIR'    Directory containing GDML geometry files
+# 'TABLESDIR'      Directory containing tables
+# 'OUTPUTFILE'     Output file (ROOT format)
+# 'NEVENT'         Number of events (Default: 1000)
+# 'RUNNUMBER'      Run number (Default:99999999)
+#
+# 1. Generate/Full/BeamTest options
+# 'SEED1'          Seed for Geant4 (Default:-1, random)
+#                    range: 0 - 900000000
+#
+# 2. Generate/Full options
+# 'CRMCDIR'        Directory where "crmc" is installed
+# 'MODEL'          Select a model. Possible models are the following
+#                  EPOS_LHC, EPOS_1.99, QGSJETII-04, QGSJETII-03,
+#                  DPMJet3.0-6, Pythia8.215
+# 'SEED2'          Seed for generators (Default:-1, random)
+#                    range   CRMC:    0 - 1000000000
+#                            Pythia8: 1 - 900000000
+# 3. Transport/Full options
+# 'ETACUT'         Rapidity cut for generated particles (Default: 4.8)
+# 'ECUT'           Energy cut in GeV for generated particles (Default: 0.5)
+# 'OPPOSITE'       Simulate eta<0 region if TRUE (Default: FALSE)
+#
+# 4. Transport/Response options
+# 'INPUTFILE'      Input file
+#
+# 5. BeamTest options
+# 'BEAM'           Set particle name according to Geant4 (Default:geantino)
+#                  (ex: proton, neutron, gamma, e-, e+, mu-, etc)
+# 'EBEAM'          Beam energy in GeV (Default:100)
+# 'PBEAM'          Injection position (Default:UNIFORM)
+#                    possible options
+#                     SMALL:   uniformly in the small tower
+#                     LARGE:   uniformly in the large tower
+#                     ZDC:     uniformly in the ZDC
+#                     UNIFORM: uniformly in wider range than 'ZDC'
+#
+#*****  END OF FILE  *****

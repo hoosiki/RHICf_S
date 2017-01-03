@@ -1,0 +1,4 @@
+This macro assume RHICf and ZDC combine geometry (no beam pipe).
+Uncomment "define DUMPTRACK" in RHICfSteppingAction.cc.
+This will create a "steps.log" file.
+Change path to steps.log in plot.C. 

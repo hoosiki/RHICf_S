@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE gdml [ 
+<!ENTITY gwd "/Users/hoosiki/github/RHICf/geometry/">
+<!ENTITY materials SYSTEM "materials.xml">
+]>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <!-- ******************************* -->
+  <!-- *** Positions and Rotations *** -->
+  <!-- ******************************* -->
+  <define>
+  </define>
+
+  <!-- the content of the materials.xml file will be included here -->
+  &materials;
+
+  <!-- *********************** -->
+  <!-- *** Logical Volumes *** -->
+  <!-- *********************** -->
+  <solids>
+    <sphere name="Log-central" rmin="0" rmax="3" startphi="0" deltaphi="360" starttheta="0" deltatheta="180" aunit="deg" lunit="cm"/>
+  </solids>
+
+  <!-- ************************ -->
+  <!-- *** Physical Volumes *** -->
+  <!-- ************************ -->
+  <structure>
+    <volume name="Vol-central">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-central"/>
+      <auxiliary auxtype="SensDet" auxvalue="Central"/>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="Vol-central"/>
+  </setup>
+</gdml>

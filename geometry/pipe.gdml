@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <!-- ***************** -->
+  <!-- *** Materials *** -->
+  <!-- ***************** -->
+  <materials>
+    <element Z="7" name="N">
+      <atom unit="g/mole" value="14.01"/>
+    </element>
+
+    <element Z="8" name="O">
+      <atom unit="g/mole" value="16"/>
+    </element>
+
+    <material name="Air" state="gas">
+      <D unit="g/cm3" value="0.00129"/>
+      <fraction n="0.7" ref="N"/>
+      <fraction n="0.3" ref="O"/>
+    </material>
+
+    <material Z="1" name="Galactic" state="gas">
+      <D unit="g/cm3" value="1.e-25"/>
+      <atom unit="g/mole" value="1.01"/>
+    </material>
+
+    <material Z="4" name="Beryllium" state="solid">
+      <D unit="g/cm3" value="1.8480"/>
+      <atom unit="g/mole" value="9.012182"/>
+    </material>
+
+    <material Z="26" name="Iron" state="solid">
+      <D unit="g/cm3" value="7.87"/>
+      <atom unit="g/mole" value="55.850"/>
+    </material>
+  </materials>
+
+  <!-- ******************************* -->
+  <!-- *** Positions and Rotations *** -->
+  <!-- ******************************* -->
+  <define>
+    <position name="Pos-Center" unit="mm" x="0" y="0" z="0"/>
+    <rotation name="Rot-Flip"   unit="deg" x="0" y="180" z="0"/>
+
+    <!-- Sphere -->
+    <position name="Pos-central" unit="mm" x="0" y="0" z="0"/>
+
+    <!-- Beam pipe -->
+    <position name="Pos-beam" unit="cm" x="0" y="0" z="0"/>
+   </define>
+
+  <!-- *********************** -->
+  <!-- *** Logical Volumes *** -->
+  <!-- *********************** -->
+  <solids>
+    <box name="WorldBox" lunit="m" x="2" y="2" z="40"/>
+  </solids>
+
+
+  <!-- ************************ -->
+  <!-- *** Physical Volumes *** -->
+  <!-- ************************ -->
+  <structure>
+    <!-- ********** -->
+    <!-- Beam pipe -->
+    <volume name="Vol-beam">
+      <materialref ref="Beryllium"/>
+      <solidref ref="Log-beam"/>
+    </volume>
+    <volume name="Vol-central">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-central"/>
+      <auxiliary auxtype="SensDet" auxvalue="Central"/>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="WorldVol"/>
+  </setup>
+</gdml>

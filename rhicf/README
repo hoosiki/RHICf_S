@@ -1,0 +1,42 @@
+***********************************************
+*** How to use RHICf Geant4 simulation tool ***
+***********************************************
+
+0. To be installed (confirmed):
+  cmake is needed for Geant4
+  CLHEP-2.2.0.4
+  Geant4.10.01p02 (set GEANT4_USE_GDML on, you need to install Xerces-C++)
+  ROOT5.34.32
+  Boost1.59.0
+  HepMC-2.06.09
+  CRMC-v1.5.3
+  PYTHIA8.215
+
+1. Set geometry files
+  Go to 'geometry' directory and run './FirstTime.sh'
+  This will automatically write the full path of this directory to the appropriate GDML files
+
+2. Create shared RHICfEvent library
+  Go to 'lib' directory and run 'make dict; make'
+  Check if libRHICfEvent.so is created
+
+3. Edit "setenv.sh"
+  Set your paths. No need to edit CMakeLists.txt or Makefile.
+
+4. Compile the main source
+  Create 'build' directory somewhere else
+  Go to 'build' directory
+  Run 'cmake -DGeant4_DIR=[Directory where you have install Geant4]/lib64/Geant4-10.1.2' 
+  Then 'make'
+
+  Now you are ready!
+  To run rhicf simulation with 
+  ./rhicf input.dat
+  Edit input.dat to suit your needs.
+
+  ############################
+  ###                      ###
+  ###     OTSUKARESAMA     ###
+  ###        m(_ _)m       ###
+  ###                      ###
+  ############################

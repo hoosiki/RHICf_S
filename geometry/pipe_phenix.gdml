@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <!-- ***************** -->
+  <!-- *** Materials *** -->
+  <!-- ***************** -->
+  <materials>
+    <element Z="7" name="N">
+      <atom unit="g/mole" value="14.01"/>
+    </element>
+
+    <element Z="8" name="O">
+      <atom unit="g/mole" value="16"/>
+    </element>
+
+    <material name="Air" state="gas">
+      <D unit="g/cm3" value="0.00129"/>
+      <fraction n="0.7" ref="N"/>
+      <fraction n="0.3" ref="O"/>
+    </material>
+
+    <material Z="1" name="Galactic" state="gas">
+      <D unit="g/cm3" value="1.e-25"/>
+      <atom unit="g/mole" value="1.01"/>
+    </material>
+
+    <material Z="4" name="Beryllium" state="solid">
+      <D unit="g/cm3" value="1.8480"/>
+      <atom unit="g/mole" value="9.012182"/>
+    </material>
+
+    <material Z="26" name="Iron" state="solid">
+      <D unit="g/cm3" value="7.87"/>
+      <atom unit="g/mole" value="55.850"/>
+    </material>
+  </materials>
+
+  <!-- ******************************* -->
+  <!-- *** Positions and Rotations *** -->
+  <!-- ******************************* -->
+  <define>
+    <position name="Pos-Center" unit="mm" x="0" y="0" z="0"/>
+    <rotation name="Rot-Flip"   unit="deg" x="0" y="180" z="0"/>
+
+    <!-- Sphere -->
+    <position name="Pos-central" unit="mm" x="0" y="0" z="0"/>
+
+    <!-- Beam pipe -->
+    <position name="Pos-beam" unit="cm" x="0" y="0" z="0"/>
+    <position name="Pos-beav" unit="cm" x="0" y="0" z="0"/>
+    <position name="Pos-flb1" unit="cm" x="0" y="0" z="200"/>
+    <position name="Pos-flb2" unit="cm" x="0" y="0" z="-200"/>
+    <position name="Pos-fls1" unit="cm" x="0" y="0" z="600"/>
+    <position name="Pos-fls2" unit="cm" x="0" y="0" z="-600"/>
+    <position name="Pos-spl1" unit="cm" x="0" y="0" z="602"/>
+    <position name="Pos-spl2" unit="cm" x="0" y="0" z="-602"/>
+    <position name="Pos-sm11" unit="cm" x="0" y="0" z="602"/>
+    <position name="Pos-sm12" unit="cm" x="0" y="0" z="-602"/>
+    <position name="Pos-fls3" unit="cm" x="0" y="0" z="629"/>
+    <position name="Pos-fls4" unit="cm" x="0" y="0" z="-629"/>
+    <position name="Pos-spu1" unit="cm" x="0" y="0" z="687.5"/>
+    <position name="Pos-spu2" unit="cm" x="0" y="0" z="-687.5"/>
+    <position name="Pos-sm21" unit="cm" x="0" y="0" z="687.5"/>
+    <position name="Pos-sm22" unit="cm" x="0" y="0" z="-687.5"/>
+    <position name="Pos-rb11" unit="cm" x="0" y="0" z="679.80"/>
+    <position name="Pos-rb12" unit="cm" x="0" y="0" z="681.95"/>
+    <position name="Pos-rb13" unit="cm" x="0" y="0" z="684.10"/>
+    <position name="Pos-rb14" unit="cm" x="0" y="0" z="686.25"/>
+    <position name="Pos-rb15" unit="cm" x="0" y="0" z="688.40"/>
+    <position name="Pos-rb16" unit="cm" x="0" y="0" z="690.55"/>
+    <position name="Pos-rb17" unit="cm" x="0" y="0" z="692.70"/>
+    <position name="Pos-rb18" unit="cm" x="0" y="0" z="694.85"/>
+    <position name="Pos-rb21" unit="cm" x="0" y="0" z="-679.80"/>
+    <position name="Pos-rb22" unit="cm" x="0" y="0" z="-681.95"/>
+    <position name="Pos-rb23" unit="cm" x="0" y="0" z="-684.10"/>
+    <position name="Pos-rb24" unit="cm" x="0" y="0" z="-686.25"/>
+    <position name="Pos-rb25" unit="cm" x="0" y="0" z="-688.40"/>
+    <position name="Pos-rb26" unit="cm" x="0" y="0" z="-690.55"/>
+    <position name="Pos-rb27" unit="cm" x="0" y="0" z="-692.70"/>
+    <position name="Pos-rb28" unit="cm" x="0" y="0" z="-694.85"/>
+    <position name="Pos-fls5" unit="cm" x="0" y="0" z="746"/>
+    <position name="Pos-fls6" unit="cm" x="0" y="0" z="-746"/>
+    <position name="Pos-cn11" unit="cm" x="0" y="0" z="616.50"/>
+    <position name="Pos-cn12" unit="cm" x="0" y="0" z="-616.50"/>
+    <position name="Pos-cm11" unit="cm" x="0" y="0" z="616.50"/>
+    <position name="Pos-cm12" unit="cm" x="0" y="0" z="-616.50"/>
+
+    <!-- Upstream area -->
+    <position name="Pos-sp31" unit="cm" x="0" y="0" z="850.14"/>
+    <position name="Pos-sp32" unit="cm" x="0" y="0" z="-850.14"/>
+    <position name="Pos-sm31" unit="cm" x="0" y="0" z="850.14"/>
+    <position name="Pos-sm32" unit="cm" x="0" y="0" z="-850.14"/>
+    <position name="Pos-sp41" unit="cm" x="0" y="0" z="-1165.00"/>
+    <position name="Pos-sp42" unit="cm" x="0" y="0" z="1165.00"/>
+    <position name="Pos-sm41" unit="cm" x="0" y="0" z="-1165.00"/>
+    <position name="Pos-sm42" unit="cm" x="0" y="0" z="1165.00"/>
+    <position name="Pos-sm43" unit="cm" x="0" y="0" z="1365.18"/>
+    <position name="Pos-sm44" unit="cm" x="0" y="0" z="-1365.18"/>
+    <position name="Pos-sm45" unit="cm" x="0" y="0" z="964.818"/>
+    <position name="Pos-sm46" unit="cm" x="0" y="0" z="-964.818"/>
+    <position name="Pos-sp51" unit="cm" x="0" y="0" z="-1165.00"/>
+    <position name="Pos-sp52" unit="cm" x="0" y="0" z="1165.00"/>
+    <position name="Pos-sm51" unit="cm" x="0" y="0" z="-1165.00"/>
+    <position name="Pos-sm52" unit="cm" x="0" y="0" z="1165.00"/>
+    <position name="Pos-sp61" unit="cm" x="0" y="0" z="-1165.00"/>
+    <position name="Pos-sp62" unit="cm" x="0" y="0" z="1165.00"/>
+    <position name="Pos-sm61" unit="cm" x="0" y="0" z="-1165.00"/>
+    <position name="Pos-sm62" unit="cm" x="0" y="0" z="1165.00"/>
+    <position name="Pos-cn21" unit="cm" x="0" y="0" z="1396.79"/>
+    <position name="Pos-cn22" unit="cm" x="0" y="0" z="-1396.79"/>
+    <position name="Pos-cm21" unit="cm" x="0" y="0" z="1396.79"/>
+    <position name="Pos-cm22" unit="cm" x="0" y="0" z="-1396.79"/>
+    <position name="Pos-sp71" unit="cm" x="0" y="0" z="-1475.555"/>
+    <position name="Pos-sp72" unit="cm" x="0" y="0" z="1475.555"/>
+    <position name="Pos-sm71" unit="cm" x="0" y="0" z="-1475.555"/>
+    <position name="Pos-sm72" unit="cm" x="0" y="0" z="1475.555"/>
+
+    <position name="Pos-sp81" unit="cm" x="0" y="0" z="1642.03"/>
+    <position name="Pos-sp82" unit="cm" x="0" y="0" z="-1642.03"/>
+    <position name="Pos-sm81" unit="cm" x="0" y="0" z="1642.03"/>
+    <position name="Pos-sm82" unit="cm" x="0" y="0" z="-1642.03"/>
+    <position name="Pos-sp91" unit="cm" x="0" y="0" z="1751.08"/>
+    <position name="Pos-sp92" unit="cm" x="0" y="0" z="-1751.08"/>
+    <position name="Pos-sh1" unit="cm" x="11.02" y="0" z="0"/>
+    <position name="Pos-sh2" unit="cm" x="-11.02" y="0" z="0"/>
+    <position name="Pos-s101" unit="cm" x="12.82" y="0" z="91.92"/>
+    <position name="Pos-s102" unit="cm" x="-12.82" y="0" z="91.92"/>
+    <rotation name="Rot-s101" unit="deg" x="0" y="1.074" z="0"/>
+    <rotation name="Rot-s102" unit="deg" x="0" y="-1.074" z="0"/>
+    <position name="Pos-m101" unit="cm" x="12.82" y="0" z="91.92"/>
+    <position name="Pos-m102" unit="cm" x="-12.82" y="0" z="91.92"/>
+<!--
+    <position name="Pos-m101" unit="cm" x="1.82" y="0" z="91.92"/>
+    <position name="Pos-m102" unit="cm" x="-1.82" y="0" z="91.92"/>
+-->
+    <rotation name="Rot-m101" unit="deg" x="0" y="1.074" z="0"/>
+    <rotation name="Rot-m102" unit="deg" x="0" y="-1.074" z="0"/>
+  </define>
+
+  <!-- *********************** -->
+  <!-- *** Logical Volumes *** -->
+  <!-- *********************** -->
+  <solids>
+    <box name="WorldBox" lunit="m" x="2" y="2" z="40"/>
+
+    <!-- Central -->
+    <sphere name="Log-central" rmin="0" rmax="0.1" startphi="0" deltaphi="360" starttheta="0" deltatheta="360" aunit="deg" lunit="mm"/>
+
+    <!-- Beam pipe -->
+    <tube name="Log-beam" rmin="3.71" rmax="3.81" z="1200" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-beav" rmin="0.00" rmax="3.71" z="1200" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-fl1" rmin="3.81" rmax="5.85" z="4.0" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-spl" rmin="3.54" rmax="3.81" z="4.0" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm1" rmin="0.00" rmax="3.54" z="4.0" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-fls3" rmin="6.35" rmax="8.39" z="4.0" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-spu" rmin="6.08" rmax="6.35" z="117" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm2" rmin="0.00" rmax="6.08" z="117" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-rb" rmin="6.35" rmax="7.35" z="0.4" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+
+    <cone name="Log-cn1" rmin1="3.54" rmax1="3.81" rmin2="6.08" rmax2="6.35" z="25" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <cone name="Log-cm1" rmin1="0.00" rmax1="3.54" rmin2="0.00" rmax2="6.08" z="25" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+
+    <!-- Upstream area -->
+    <tube name="Log-sp3" rmin="6.08" rmax="6.35" z="207.88" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm3" rmin="0.00" rmax="6.08" z="207.88" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sp4" rmin="6.99" rmax="7.14" z="421.84" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm41" rmin="0.00" rmax="6.99" z="378.89" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm43" rmin="0.00" rmax="6.99" z="21.475" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sp5" rmin="9.53" rmax="10.16" z="421.84" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm5" rmin="7.14" rmax="09.53" z="421.84" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sp6" rmin="15.34" rmax="37.00" z="421.84" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm6" rmin="10.16" rmax="15.34" z="421.84" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <cone name="Log-cn2" rmin1="7.14" rmax1="7.77" rmin2="14.60" rmax2="15.24" z="41.74" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <cone name="Log-cm2" rmin1="0.00" rmax1="7.14" rmin2="00.00" rmax2="14.60" z="41.74" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sp7" rmin="14.60" rmax="15.24" z="115.79" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm7" rmin="00.00" rmax="14.60" z="115.79" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+
+    <tube name="Log-sp8" rmin="20.00" rmax="20.96" z="217.16" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sm8" rmin="00.00" rmax="20.00" z="217.16" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sp9" rmin="00.00" rmax="20.96" z="0.94" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-s10" rmin="6.07" rmax="6.35" z="183" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <tube name="Log-sh" rmin="00.00" rmax="6.35" z="0.94" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <union name="Log-pipe-end-0">
+      <first ref="Log-sp9"/>
+      <second ref="Log-s10"/>
+      <positionref ref="Pos-s101"/>
+      <rotationref ref="Rot-s101"/>
+    </union>
+    <union name="Log-pipe-end-1">
+      <first ref="Log-pipe-end-0"/>
+      <second ref="Log-s10"/>
+      <positionref ref="Pos-s102"/>
+      <rotationref ref="Rot-s102"/>
+    </union>
+    <subtraction name="Log-pipe-end-2">
+      <first ref="Log-pipe-end-1"/>
+      <second ref="Log-sh"/>
+      <positionref ref="Pos-sh1"/>
+    </subtraction>
+    <subtraction name="Log-pipe-end">
+      <first ref="Log-pipe-end-2"/>
+      <second ref="Log-sh"/>
+      <positionref ref="Pos-sh2"/>
+    </subtraction>
+
+    <tube name="Log-m10" rmin="0.00" rmax="6.07" z="183" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+    <union name="Log-vaccum-end-0">
+      <first ref="Log-sh"/>
+      <second ref="Log-sh"/>
+      <positionref ref="Pos-sh1"/>
+    </union>
+    <union name="Log-vaccum-end-1">
+      <first ref="Log-vaccum-end-0"/>
+      <second ref="Log-sh"/>
+      <positionref ref="Pos-sh2"/>
+    </union>
+    <union name="Log-vaccum-end-2">
+      <first ref="Log-vaccum-end-1"/>
+      <second ref="Log-m10"/>
+      <positionref ref="Pos-m101"/>
+      <rotationref ref="Rot-m101"/>
+    </union>
+    <union name="Log-vaccum-end">
+      <first ref="Log-vaccum-end-2"/>
+      <second ref="Log-m10"/>
+      <positionref ref="Pos-m102"/>
+      <rotationref ref="Rot-m102"/>
+    </union>
+  </solids>
+
+
+  <!-- ************************ -->
+  <!-- *** Physical Volumes *** -->
+  <!-- ************************ -->
+  <structure>
+    <!-- ********** -->
+    <!-- Beam pipe -->
+    <volume name="Vol-beam">
+      <materialref ref="Beryllium"/>
+      <solidref ref="Log-beam"/>
+    </volume>
+    <volume name="Vol-central">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-central"/>
+      <auxiliary auxtype="SensDet" auxvalue="Central"/>
+    </volume>
+    <volume name="Vol-beav">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-beav"/>
+      <physvol>
+	<volumeref ref="Vol-central"/>
+	<positionref ref="Pos-central"/>
+      </physvol>
+    </volume>
+    <volume name="Vol-flb">
+      <materialref ref="Beryllium"/>
+      <solidref ref="Log-fl1"/>
+    </volume>
+    <volume name="Vol-fls1">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-fl1"/>
+    </volume>
+    <volume name="Vol-spl">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-spl"/>
+    </volume>
+    <volume name="Vol-sm1">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm1"/>
+    </volume>
+    <volume name="Vol-fls3">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-fls3"/>
+    </volume>
+    <volume name="Vol-spu">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-spu"/>
+    </volume>
+    <volume name="Vol-sm2">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm2"/>
+    </volume>
+    <volume name="Vol-rb">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-rb"/>
+    </volume>
+    <volume name="Vol-cn1">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-cn1"/>
+    </volume>
+    <volume name="Vol-cm1">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-cm1"/>
+    </volume>
+
+    <!-- Upstream area -->
+    <volume name="Vol-sp3">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-sp3"/>
+    </volume>
+    <volume name="Vol-sm3">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm3"/>
+    </volume>
+    <volume name="Vol-sp4">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-sp4"/>
+    </volume>
+    <volume name="Vol-sm41">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm41"/>
+    </volume>
+    <volume name="Vol-sm43">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm43"/>
+    </volume>
+    <volume name="Vol-sp5">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-sp5"/>
+    </volume>
+    <volume name="Vol-sm5">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm5"/>
+    </volume>
+    <volume name="Vol-sp6">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-sp6"/>
+    </volume>
+    <volume name="Vol-sm6">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm6"/>
+    </volume>
+    <volume name="Vol-cn2">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-cn2"/>
+    </volume>
+    <volume name="Vol-cm2">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-cm2"/>
+    </volume>
+    <volume name="Vol-sp7">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-sp7"/>
+    </volume>
+    <volume name="Vol-sm7">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm7"/>
+    </volume>
+
+    <volume name="Vol-sp8">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-sp8"/>
+    </volume>
+    <volume name="Vol-sm8">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-sm8"/>
+    </volume>
+    <volume name="Vol-pipe-end">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-pipe-end"/>
+    </volume>
+    <volume name="Vol-m10">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-m10"/>
+    </volume>
+    <volume name="Vol-s10">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-s10"/>
+      <physvol>
+	<volumeref ref="Vol-m10"/>
+	<positionref ref="Pos-Center"/>
+      </physvol>
+    </volume>
+    <volume name="Vol-pipe-end">
+      <materialref ref="Iron"/>
+      <solidref ref="Log-pipe-end"/>
+    </volume>
+    <volume name="Vol-vaccum-end">
+      <materialref ref="Galactic"/>
+      <solidref ref="Log-vaccum-end"/>
+    </volume>
+
+    <!-- ******************** -->
+    <!-- *** World Volume *** -->
+    <!-- ******************** -->
+    <volume name="WorldVol">
+      <materialref ref="Air"/>
+      <solidref ref="WorldBox"/>
+      <!-- Beam pipe -->
+      <physvol>
+	<volumeref ref="Vol-beam"/>
+	<positionref ref="Pos-beam"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-beav"/>
+	<positionref ref="Pos-beav"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-flb"/>
+	<positionref ref="Pos-flb1"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-flb"/>
+	<positionref ref="Pos-flb2"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-fls1"/>
+	<positionref ref="Pos-fls1"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-fls1"/>
+	<positionref ref="Pos-fls2"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-spl"/>
+	<positionref ref="Pos-spl1"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-spl"/>
+	<positionref ref="Pos-spl2"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm1"/>
+	<positionref ref="Pos-sm11"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm1"/>
+	<positionref ref="Pos-sm12"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-fls3"/>
+	<positionref ref="Pos-fls3"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-fls3"/>
+	<positionref ref="Pos-fls4"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-fls3"/>
+	<positionref ref="Pos-fls5"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-fls3"/>
+	<positionref ref="Pos-fls6"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-spu"/>
+	<positionref ref="Pos-spu1"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-spu"/>
+	<positionref ref="Pos-spu2"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm2"/>
+	<positionref ref="Pos-sm21"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm2"/>
+	<positionref ref="Pos-sm22"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb11"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb12"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb13"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb14"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb15"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb16"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb17"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb18"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb21"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb22"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb23"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb24"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb25"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb26"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb27"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-rb"/>
+	<positionref ref="Pos-rb28"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cn1"/>
+	<positionref ref="Pos-cn11"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cn1"/>
+	<positionref ref="Pos-cn12"/>
+	<rotationref ref="Rot-Flip"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cm1"/>
+	<positionref ref="Pos-cm11"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cm1"/>
+	<positionref ref="Pos-cm12"/>
+	<rotationref ref="Rot-Flip"/>
+      </physvol>
+
+      <!-- Upstream area -->
+      <physvol>
+	<volumeref ref="Vol-sp3"/>
+	<positionref ref="Pos-sp31"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp3"/>
+	<positionref ref="Pos-sp32"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm3"/>
+	<positionref ref="Pos-sm31"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm3"/>
+	<positionref ref="Pos-sm32"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp4"/>
+	<positionref ref="Pos-sp41"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp4"/>
+	<positionref ref="Pos-sp42"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm41"/>
+	<positionref ref="Pos-sm41"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm41"/>
+	<positionref ref="Pos-sm42"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm43"/>
+	<positionref ref="Pos-sm43"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm43"/>
+	<positionref ref="Pos-sm44"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm43"/>
+	<positionref ref="Pos-sm45"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm43"/>
+	<positionref ref="Pos-sm46"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp5"/>
+	<positionref ref="Pos-sp51"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp5"/>
+	<positionref ref="Pos-sp52"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm5"/>
+	<positionref ref="Pos-sm51"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm5"/>
+	<positionref ref="Pos-sm52"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp6"/>
+	<positionref ref="Pos-sp61"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp6"/>
+	<positionref ref="Pos-sp62"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm6"/>
+	<positionref ref="Pos-sm61"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm6"/>
+	<positionref ref="Pos-sm62"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cn2"/>
+	<positionref ref="Pos-cn21"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cn2"/>
+	<positionref ref="Pos-cn22"/>
+	<rotationref ref="Rot-Flip"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cm2"/>
+	<positionref ref="Pos-cm21"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-cm2"/>
+	<positionref ref="Pos-cm22"/>
+	<rotationref ref="Rot-Flip"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp7"/>
+	<positionref ref="Pos-sp71"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp7"/>
+	<positionref ref="Pos-sp72"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm7"/>
+	<positionref ref="Pos-sm71"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm7"/>
+	<positionref ref="Pos-sm72"/>
+      </physvol>
+
+      <physvol>
+	<volumeref ref="Vol-sp8"/>
+	<positionref ref="Pos-sp81"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sp8"/>
+	<positionref ref="Pos-sp82"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm8"/>
+	<positionref ref="Pos-sm81"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-sm8"/>
+	<positionref ref="Pos-sm82"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-pipe-end"/>
+	<positionref ref="Pos-sp91"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-vaccum-end"/>
+	<positionref ref="Pos-sp91"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-pipe-end"/>
+	<positionref ref="Pos-sp92"/>
+	<rotationref ref="Rot-Flip"/>
+      </physvol>
+      <physvol>
+	<volumeref ref="Vol-vaccum-end"/>
+	<positionref ref="Pos-sp92"/>
+	<rotationref ref="Rot-Flip"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="WorldVol"/>
+  </setup>
+</gdml>

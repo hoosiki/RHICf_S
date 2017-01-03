@@ -1,0 +1,27 @@
+GENERATE            central.gdml               0    bGENERATE
+
+TRANSPORT           pipe_star.gdml             0    bTRANSPORT
+TRANSPORT_NOPIPE    pipe_nostructure.gdml      0    bTRANSPORT
+
+RESPONSE_POS1       response_pos1.gdml         0    bRESPONSE
+RESPONSE_POS2       response_pos2.gdml        10    bRESPONSE
+RESPONSE_POS3       response_pos3.gdml        20    bRESPONSE
+RESPONSE_POS4       response_pos4.gdml     -47.4    bRESPONSE
+
+FULL_POS1           full_pos1.gdml             0    bFULL
+FULL_POS2           full_pos2.gdml            10    bFULL
+FULL_POS3           full_pos3.gdml            20    bFULL
+FULL_POS4           full_pos4.gdml         -47.4    bFULL
+
+FULL_NOPIPE_POS1    full_nopipe_pos1.gdml      0    bFULL
+FULL_NOPIPE_POS2    full_nopipe_pos2.gdml     10    bFULL
+FULL_NOPIPE_POS3    full_nopipe_pos3.gdml     20    bFULL
+FULL_NOPIPE_POS4    full_nopipe_pos4.gdml  -47.4    bFULL
+
+BEAMTEST_ARM1       beamtest_arm1.gdml         0    bBEAMTEST_ARM1
+BEAMTEST_ZDC        beamtest_zdc.gdml          0    bBEAMTEST_ZDC
+
+BEAMTEST_POS1       beamtest_pos1.gdml         0    bBEAMTEST_ALL
+BEAMTEST_POS2       beamtest_pos2.gdml        10    bBEAMTEST_ALL
+BEAMTEST_POS3       beamtest_pos3.gdml        20    bBEAMTEST_ALL
+BEAMTEST_POS4       beamtest_pos4.gdml     -47.4    bBEAMTEST_ALL

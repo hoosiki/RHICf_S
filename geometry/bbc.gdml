@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE gdml [ 
+<!ENTITY materials SYSTEM "materials.xml">
+]>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <!--
+     BBC position(~375cm from IP)
+     Large hexagonal annulus:
+       - inner (outer) diameter 38cm (193cm);
+       - coverage 2.1<|η|<3.3
+     Small hexagonal annulus:
+       - inner (outer) diameter 9.6cm (48cm);
+       - coverage 3.3<|η|<5.0
+    -->
+
+
+  <!-- ******************************* -->
+  <!-- *** Positions and Rotations *** -->
+  <!-- ******************************* -->
+  <define>
+    <position name="Pos-bbc-tile-small-sub0" unit="mm" x="+32*sqrt(3)" y="+32" z="0"/>
+    <rotation name="Rot-bbc-tile-small-sub0" unit="deg" z="-60"/>
+    <position name="Pos-bbc-tile-small-sub1" unit="mm" x="-32*sqrt(3)" y="+32" z="0"/>
+    <rotation name="Rot-bbc-tile-small-sub1" unit="deg" z="+60"/>
+    <position name="Pos-bbc-tile-small-sub2" unit="mm" x="-32*sqrt(3)" y="-32" z="0"/>
+    <rotation name="Rot-bbc-tile-small-sub2" unit="deg" z="-60"/>
+    <position name="Pos-bbc-tile-small-sub3" unit="mm" x="+32*sqrt(3)" y="-32" z="0"/>
+    <rotation name="Rot-bbc-tile-small-sub3" unit="deg" z="+60"/>
+
+    <position name="Pos-bbc-tile-small-01" unit="mm" x="0" y="+96" z="10"/>
+    <position name="Pos-bbc-tile-small-02" unit="mm" x="-48*sqrt(3)" y="+48" z="10"/>
+    <position name="Pos-bbc-tile-small-03" unit="mm" x="-48*sqrt(3)" y="-48" z="10"/>
+    <position name="Pos-bbc-tile-small-04" unit="mm" x="0" y="-96" z="10"/>
+    <position name="Pos-bbc-tile-small-05" unit="mm" x="+48*sqrt(3)" y="-48" z="10"/>
+    <position name="Pos-bbc-tile-small-06" unit="mm" x="+48*sqrt(3)" y="+48" z="10"/>
+    <position name="Pos-bbc-tile-small-07" unit="mm" x="+48*sqrt(3)" y="+144" z="10"/>
+    <position name="Pos-bbc-tile-small-08" unit="mm" x="0" y="+192" z="10"/>
+    <position name="Pos-bbc-tile-small-09" unit="mm" x="-48*sqrt(3)" y="+144" z="10"/>
+    <position name="Pos-bbc-tile-small-10" unit="mm" x="-96*sqrt(3)" y="+96" z="10"/>
+    <position name="Pos-bbc-tile-small-11" unit="mm" x="-96*sqrt(3)" y="0" z="10"/>
+    <position name="Pos-bbc-tile-small-12" unit="mm" x="-96*sqrt(3)" y="-96" z="10"/>
+    <position name="Pos-bbc-tile-small-13" unit="mm" x="-48*sqrt(3)" y="-144" z="10"/>
+    <position name="Pos-bbc-tile-small-14" unit="mm" x="0" y="-192" z="10"/>
+    <position name="Pos-bbc-tile-small-15" unit="mm" x="+48*sqrt(3)" y="-144" z="10"/>
+    <position name="Pos-bbc-tile-small-16" unit="mm" x="+96*sqrt(3)" y="-96" z="10"/>
+    <position name="Pos-bbc-tile-small-17" unit="mm" x="+96*sqrt(3)" y="0" z="10"/>
+    <position name="Pos-bbc-tile-small-18" unit="mm" x="+96*sqrt(3)" y="+96" z="10"/>
+
+
+    <position name="Pos-bbc-tile-large-sub0" unit="mm" x="+380/sqrt(3)" y="+380/3" z="0"/>
+    <rotation name="Rot-bbc-tile-large-sub0" unit="deg" z="-60"/>
+    <position name="Pos-bbc-tile-large-sub1" unit="mm" x="-380/sqrt(3)" y="+380/3" z="0"/>
+    <rotation name="Rot-bbc-tile-large-sub1" unit="deg" z="+60"/>
+    <position name="Pos-bbc-tile-large-sub2" unit="mm" x="-380/sqrt(3)" y="-380/3" z="0"/>
+    <rotation name="Rot-bbc-tile-large-sub2" unit="deg" z="-60"/>
+    <position name="Pos-bbc-tile-large-sub3" unit="mm" x="+380/sqrt(3)" y="-380/3" z="0"/>
+    <rotation name="Rot-bbc-tile-large-sub3" unit="deg" z="+60"/>
+
+    <position name="Pos-bbc-tile-large-19" unit="mm" x="0" y="+380" z="0"/>
+    <position name="Pos-bbc-tile-large-20" unit="mm" x="-190*sqrt(3)" y="+190" z="0"/>
+    <position name="Pos-bbc-tile-large-21" unit="mm" x="-190*sqrt(3)" y="-190" z="0"/>
+    <position name="Pos-bbc-tile-large-22" unit="mm" x="0" y="-380" z="0"/>
+    <position name="Pos-bbc-tile-large-23" unit="mm" x="+190*sqrt(3)" y="-190" z="0"/>
+    <position name="Pos-bbc-tile-large-24" unit="mm" x="+190*sqrt(3)" y="+190" z="0"/>
+    <position name="Pos-bbc-tile-large-25" unit="mm" x="+190*sqrt(3)" y="+570" z="0"/>
+    <position name="Pos-bbc-tile-large-26" unit="mm" x="0" y="+760" z="0"/>
+    <position name="Pos-bbc-tile-large-27" unit="mm" x="-190*sqrt(3)" y="+570" z="0"/>
+    <position name="Pos-bbc-tile-large-28" unit="mm" x="-380*sqrt(3)" y="+380" z="0"/>
+    <position name="Pos-bbc-tile-large-29" unit="mm" x="-380*sqrt(3)" y="0" z="0"/>
+    <position name="Pos-bbc-tile-large-30" unit="mm" x="-380*sqrt(3)" y="-380" z="0"/>
+    <position name="Pos-bbc-tile-large-31" unit="mm" x="-190*sqrt(3)" y="-570" z="0"/>
+    <position name="Pos-bbc-tile-large-32" unit="mm" x="0" y="-760" z="0"/>
+    <position name="Pos-bbc-tile-large-33" unit="mm" x="+190*sqrt(3)" y="-570" z="0"/>
+    <position name="Pos-bbc-tile-large-34" unit="mm" x="+380*sqrt(3)" y="-380" z="0"/>
+    <position name="Pos-bbc-tile-large-35" unit="mm" x="+380*sqrt(3)" y="0" z="0"/>
+    <position name="Pos-bbc-tile-large-36" unit="mm" x="+380*sqrt(3)" y="+380" z="0"/>
+  </define>
+
+  <!-- the content of the materials.xml file will be included here -->
+  &materials;
+
+  <!-- *********************** -->
+  <!-- *** Logical Volumes *** -->
+  <!-- *********************** -->
+  <solids>
+    <tube name="Log-BBC" rmin="4.8" rmax="100" z="2" deltaphi="360" startphi="0" aunit="deg" lunit="cm"/>
+
+    <box name="Log-bbc-tile-small-base" lunit="mm" x="64*sqrt(3)" y="96" z="10"/>
+    <box name="Log-bbc-tile-small-sub" lunit="mm" x="32*sqrt(3)" y="32" z="11"/>
+
+    <subtraction name="Log-bbc-tile-small-0">
+      <first ref="Log-bbc-tile-small-base"/>
+      <second ref="Log-bbc-tile-small-sub"/>
+      <positionref ref="Pos-bbc-tile-small-sub0"/>
+      <rotationref ref="Rot-bbc-tile-small-sub0"/>
+    </subtraction>
+    <subtraction name="Log-bbc-tile-small-1">
+      <first ref="Log-bbc-tile-small-0"/>
+      <second ref="Log-bbc-tile-small-sub"/>
+      <positionref ref="Pos-bbc-tile-small-sub1"/>
+      <rotationref ref="Rot-bbc-tile-small-sub1"/>
+    </subtraction>
+    <subtraction name="Log-bbc-tile-small-2">
+      <first ref="Log-bbc-tile-small-1"/>
+      <second ref="Log-bbc-tile-small-sub"/>
+      <positionref ref="Pos-bbc-tile-small-sub2"/>
+      <rotationref ref="Rot-bbc-tile-small-sub2"/>
+    </subtraction>
+    <subtraction name="Log-bbc-tile-small">
+      <first ref="Log-bbc-tile-small-2"/>
+      <second ref="Log-bbc-tile-small-sub"/>
+      <positionref ref="Pos-bbc-tile-small-sub3"/>
+      <rotationref ref="Rot-bbc-tile-small-sub3"/>
+    </subtraction>
+
+
+    <box name="Log-bbc-tile-large-base" lunit="mm" x="760/sqrt(3)" y="380" z="10"/>
+    <box name="Log-bbc-tile-large-sub" lunit="mm" x="380/sqrt(3)" y="380/3" z="11"/>
+
+    <subtraction name="Log-bbc-tile-large-0">
+      <first ref="Log-bbc-tile-large-base"/>
+      <second ref="Log-bbc-tile-large-sub"/>
+      <positionref ref="Pos-bbc-tile-large-sub0"/>
+      <rotationref ref="Rot-bbc-tile-large-sub0"/>
+    </subtraction>
+    <subtraction name="Log-bbc-tile-large-1">
+      <first ref="Log-bbc-tile-large-0"/>
+      <second ref="Log-bbc-tile-large-sub"/>
+      <positionref ref="Pos-bbc-tile-large-sub1"/>
+      <rotationref ref="Rot-bbc-tile-large-sub1"/>
+    </subtraction>
+    <subtraction name="Log-bbc-tile-large-2">
+      <first ref="Log-bbc-tile-large-1"/>
+      <second ref="Log-bbc-tile-large-sub"/>
+      <positionref ref="Pos-bbc-tile-large-sub2"/>
+      <rotationref ref="Rot-bbc-tile-large-sub2"/>
+    </subtraction>
+    <subtraction name="Log-bbc-tile-large">
+      <first ref="Log-bbc-tile-large-2"/>
+      <second ref="Log-bbc-tile-large-sub"/>
+      <positionref ref="Pos-bbc-tile-large-sub3"/>
+      <rotationref ref="Rot-bbc-tile-large-sub3"/>
+    </subtraction>
+  </solids>
+
+
+  <!-- ************************ -->
+  <!-- *** Physical Volumes *** -->
+  <!-- ************************ -->
+  <structure>
+    <volume name="Vol-bbc-tile-small">
+      <materialref ref="Scintillator"/>
+      <solidref ref="Log-bbc-tile-small"/>
+      <auxiliary auxtype="SensDet" auxvalue="BBC"/>
+    </volume>
+    <volume name="Vol-bbc-tile-large">
+      <materialref ref="Scintillator"/>
+      <solidref ref="Log-bbc-tile-large"/>
+      <auxiliary auxtype="SensDet" auxvalue="BBC"/>
+    </volume>
+    <!-- ******************** -->
+    <!-- *** World Volume *** -->
+    <!-- ******************** -->
+    <volume name="Vol-BBC">
+      <materialref ref="Air"/>
+      <solidref ref="Log-BBC"/>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-01"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-02"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-03"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-04"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-05"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-06"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-07"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-08"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-09"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-10"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-11"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-12"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-13"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-14"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-15"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-16"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-17"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-small"/>
+        <positionref ref="Pos-bbc-tile-small-18"/>
+      </physvol>
+
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-19"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-20"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-21"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-22"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-23"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-24"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-25"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-26"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-27"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-28"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-29"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-30"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-31"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-32"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-33"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-34"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-35"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Vol-bbc-tile-large"/>
+        <positionref ref="Pos-bbc-tile-large-36"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="Vol-BBC"/>
+  </setup>
+</gdml>
